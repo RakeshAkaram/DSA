@@ -4,8 +4,8 @@ import java.security.Key;
 import java.util.*;
 
 public class BfsOnAdjList {
-    static Map<Integer,ArrayList<Integer>> adjList=new HashMap<>();
-    static Map<Integer,Boolean> visited=new HashMap<>();
+    static private Map<Integer,ArrayList<Integer>> adjList=new HashMap<>();
+    static private Map<Integer,Boolean> visited=new HashMap<>();
     public static void main(String[] args) {
         getData();
         //Consider the start Index is 1
@@ -16,10 +16,12 @@ public class BfsOnAdjList {
         while(!bfsQueue.isEmpty()){
             Integer nodeFindItsAdj=bfsQueue.poll();
             System.out.print(nodeFindItsAdj+" ");
-            for(Integer adjNode: adjList.get(nodeFindItsAdj)){
-                if(!visited.get(adjNode)){
-                    bfsQueue.add(adjNode);
-                    visited.put(adjNode,true);
+            if(adjList.get(nodeFindItsAdj)!=null){
+                for(Integer adjNode: adjList.get(nodeFindItsAdj)){
+                    if(!visited.get(adjNode)){
+                        bfsQueue.add(adjNode);
+                        visited.put(adjNode,true);
+                    }
                 }
             }
         }
