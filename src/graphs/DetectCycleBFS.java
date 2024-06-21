@@ -27,10 +27,11 @@ public class DetectCycleBFS {
             Integer key = nodeNParent.getKey();
             Integer parent = nodeNParent.getValue();
             for(Integer edge: adjList.get(key)){
+                System.out.println("Edge: "+edge+" Key:"+key+" Parent: "+parent);
                 if(visited.get(edge) && !Objects.equals(parent, edge)){ // unvisited node
                     return true;
                 }
-                else{
+                else if(!visited.get(edge)){
                     queue.add(new AbstractMap.SimpleEntry<>(edge, key));
                     visited.put(edge,true);
                 }
