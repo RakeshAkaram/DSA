@@ -1,4 +1,4 @@
-package graphs;
+package graphs.basics;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -42,7 +42,7 @@ public class DetectCycleBFS {
 
     static void getData() throws FileNotFoundException {
         //step 1: Read the file where the input is present
-        File file = new File("./src/graphs/input3.txt");
+        File file = new File("./src/graphs/resources/input3.txt");
 
         //step 2: Read each line from that file using Scanner Object
         Scanner scanner = new Scanner(file);

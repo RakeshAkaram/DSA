@@ -1,6 +1,5 @@
-package graphs;
+package graphs.basics;
 
-import java.security.Key;
 import java.util.*;
 
 public class BfsOnAdjList {

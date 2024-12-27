@@ -1,4 +1,4 @@
-package graphs;
+package graphs.basics;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -56,7 +56,7 @@ public class DfsOnAdjList {
 
     static List<int[]> getData() throws FileNotFoundException {
         List<int[]> data = new ArrayList<>();
-        File file = new File("./src/graphs/input.txt");
+        File file = new File("./src/graphs/resources/input.txt");
         Scanner scanner = new Scanner(file);
 
         while (scanner.hasNext()) {
