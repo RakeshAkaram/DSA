@@ -10,7 +10,7 @@ public class LL005_InsertInLL {
 
         Scanner scanner = new Scanner(System.in);
         boolean existFlag= false;
-        while(true){
+        while(!existFlag){
             System.out.println("\n***********Insertion At************");
             System.out.println("1. HEAD\n2. LAST\n3. POSITION\n4. VALUE\n5. EXIT");
             System.out.println("**********************************");
@@ -21,29 +21,31 @@ public class LL005_InsertInLL {
                 System.out.println("Enter the value to insert");
                 value = scanner.nextInt();
             }
-
-            switch (option){
-                case 1:
-                    head = insertAtHead(head,value);
-                    break;
-                case 2:
-                    head = insertAtLast(head,value);
-                    break;
-                case 3:
-                    System.out.println("Enter the position");
-                    int position=scanner.nextInt();
-                    head = insertAtPosition(head,position,value);
-                    break;
-                case 4:
-                    System.out.println("Enter the search value");
-                    int searchValue=scanner.nextInt();
-                    head = insertAtValue(head,value,searchValue);
-                    break;
-                case 5: existFlag=true; break;
-                default:
-                    System.out.println("Enter a valid option");
+            if(head==null){
+                head = new Node(value);
+            }else{
+                switch (option){
+                    case 1:
+                        head = insertAtHead(head,value);
+                        break;
+                    case 2:
+                        head = insertAtLast(head,value);
+                        break;
+                    case 3:
+                        System.out.println("Enter the position");
+                        int position=scanner.nextInt();
+                        head = insertAtPosition(head,position,value);
+                        break;
+                    case 4:
+                        System.out.println("Enter the search value");
+                        int searchValue=scanner.nextInt();
+                        head = insertAtValue(head,value,searchValue);
+                        break;
+                    case 5: existFlag=true; break;
+                    default:
+                        System.out.println("Enter a valid option");
+                }
             }
-            if(existFlag) break;
             LL001_ConvertArrayToLL.displayLL(head);
         }
     }

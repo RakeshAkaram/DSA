@@ -8,7 +8,7 @@ public class LL006_ConvertArrayToDLL {
         displayDLL(head);
     }
 
-    private static void displayDLL(NodeDLL head) {
+    public static void displayDLL(NodeDLL head) {
         NodeDLL temp=head;
         while (temp.rightNode!=null){
             System.out.print(temp.data+"->");
