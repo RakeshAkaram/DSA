@@ -10,6 +10,7 @@ public class LL006_ConvertArrayToDLL {
 
     public static void displayDLL(NodeDLL head) {
         NodeDLL temp=head;
+        System.out.println("Left to Right: ");
         if(temp!=null){
             while (temp.rightNode!=null){
                 System.out.print(temp.data+"->");
@@ -17,6 +18,7 @@ public class LL006_ConvertArrayToDLL {
             }
             System.out.print(temp.data+"->null");
             System.out.println();
+            System.out.println("Right to Left: ");
             while (temp.leftNode!=null){
                 System.out.print(temp.data+"<-");
                 temp=temp.leftNode;

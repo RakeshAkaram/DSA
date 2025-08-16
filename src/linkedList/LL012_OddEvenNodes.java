@@ -3,7 +3,7 @@ package linkedList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OddEvenNodes {
+public class LL012_OddEvenNodes {
     public static void main(String[] args) {
         Node head=LL001_ConvertArrayToLL.convertToLL(new int[]{1,2,3,4,5,6,7,8,9});
         LL001_ConvertArrayToLL.displayLL(head);
