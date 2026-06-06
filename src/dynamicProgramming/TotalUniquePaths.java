@@ -2,8 +2,8 @@ package dynamicProgramming;
 
 public class TotalUniquePaths  {
     public static void main(String[] args) {
-        int n=2;
-        int m=4;
+        int n=3;
+        int m=3;
        int result = totalUniquePaths(n,m);
         System.out.println("Total Number of Ways: "+result);
     }
