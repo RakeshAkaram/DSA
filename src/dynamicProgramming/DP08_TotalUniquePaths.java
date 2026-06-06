@@ -1,6 +1,6 @@
 package dynamicProgramming;
 
-public class DP8_TotalUniquePaths {
+public class DP08_TotalUniquePaths {
     public static void main(String[] args) {
         int n=3;
         int m=3;
