@@ -57,7 +57,7 @@ public class Node {
             int right = 2*i+1;
             if(nodes[i]!=null){
                 nodes[i].setLeft(nodes[left]);
-                if(right< arr.length){
+                if(right<= arr.length){
                     nodes[i].setRight(nodes[right]);
                 }
             }
