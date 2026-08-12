@@ -1,4 +1,4 @@
-package trees.traversal;
+package trees;
 
 public class Node {
     private Integer data;
@@ -9,6 +9,10 @@ public class Node {
         this.data = data;
         this.left = left;
         this.right = right;
+    }
+
+    public Node(int data) {
+        this.data = data;
     }
 
     public int getData() {
@@ -65,5 +69,42 @@ public class Node {
             i++;
         }
         return nodes[1];
+    }
+
+    public static Node balanceTree(){
+        Node node = new Node(1);
+
+        node.setLeft(new Node(2));
+        node.setRight(new Node(3));
+
+        node.getLeft().setLeft(new Node(4));
+        node.getLeft().setRight(new Node(5));
+
+        node.getRight().setLeft(new Node(6));
+        node.getRight().setRight(new Node(7));
+
+        node.getLeft().getLeft().setLeft(new Node(8));
+        node.getLeft().getLeft().setRight(new Node(9));
+
+        node.getLeft().getRight().setLeft(new Node(10));
+        node.getLeft().getRight().setRight(new Node(11));
+        return  node;
+    }
+
+    public static Node unbalanced() {
+        Node node = new Node(1);
+
+        node.setLeft(new Node(2));
+        node.setRight(new Node(3));
+
+        node.getLeft().setLeft(new Node(4));
+        node.getLeft().setRight(new Node(5));
+
+        node.getLeft().getLeft().setLeft(new Node(6));
+
+        node.getLeft().getLeft().getLeft().setLeft(new Node(7));
+
+        node.getLeft().getLeft().getLeft().getLeft().setRight(new Node(8));
+        return node;
     }
 }

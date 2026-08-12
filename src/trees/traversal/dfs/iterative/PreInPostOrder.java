@@ -1,10 +1,10 @@
 package trees.traversal.dfs.iterative;
 
-import trees.traversal.Node;
+import trees.Node;
 
 import java.util.*;
 
-import static trees.traversal.Node.dataPreparation;
+import static trees.Node.dataPreparation;
 
 public class PreInPostOrder {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
 package trees.traversal.dfs.recursion;
 
-import trees.traversal.Node;
+import trees.Node;
 
-import static trees.traversal.Node.dataPreparation;
+import static trees.Node.dataPreparation;
 
 public class PreOrder {
     public static void main(String[] args) {

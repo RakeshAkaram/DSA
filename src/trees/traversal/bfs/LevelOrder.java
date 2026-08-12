@@ -1,11 +1,11 @@
 package trees.traversal.bfs;
 
-import trees.traversal.Node;
+import trees.Node;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-import static trees.traversal.Node.dataPreparation;
+import static trees.Node.dataPreparation;
 
 public class LevelOrder {
     public static void main(String[] args) {
