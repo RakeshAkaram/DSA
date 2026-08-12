@@ -1,4 +1,4 @@
-package trees.traversal.dfs;
+package trees.traversal.dfs.recursion;
 
 import trees.traversal.Node;
 
@@ -15,6 +15,6 @@ public class PreOrder {
         if(node==null) return;
         System.out.print(node.getData()+" ");
         preOrder(node.getLeft());
-        preOrder(node.getRight());
+        preOrder(node.getRight());//1 2 4 8 9 5 10 3 6 7
     }
 }

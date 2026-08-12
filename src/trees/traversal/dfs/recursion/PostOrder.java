@@ -1,4 +1,4 @@
-package trees.traversal.dfs;
+package trees.traversal.dfs.recursion;
 
 import trees.traversal.Node;
 
