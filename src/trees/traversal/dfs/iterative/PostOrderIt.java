@@ -20,18 +20,21 @@ public class PostOrderIt {
                 stack.push(node);
                 node = node.getLeft();
             }else{
-                node = stack.peek();
-                if(node.getRight()!=null) {
-                    node = node.getRight();
+                Node currNode=stack.peek();
+                if(currNode.getRight()!=null){
+                    node = currNode.getRight();
                 }else{
-                    Node temp = stack.pop();
-                    System.out.print(temp.getData()+" ");
-                    while(!stack.isEmpty() && temp == stack.peek().getRight()){
-                        temp = stack.pop();
-                        System.out.print(temp.getData()+" ");
+                    Node rootNode = stack.pop();
+                    System.out.print(rootNode.getData()+" ");
+                    while(!stack.isEmpty() && rootNode==stack.peek().getRight()){
+                        rootNode=stack.pop();
+                        System.out.print(rootNode.getData()+" ");
                     }
+
                 }
             }
         }
     }
 }
+
+
