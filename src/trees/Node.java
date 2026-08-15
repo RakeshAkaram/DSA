@@ -107,4 +107,21 @@ public class Node {
         node.getLeft().getLeft().getLeft().getLeft().setRight(new Node(8));
         return node;
     }
+
+    public static Node diameter(){
+        Node node = new Node(1);
+        node.setLeft(new Node(2));
+        node.setRight(new Node(3));
+
+        node.getRight().setLeft(new Node(4));
+        node.getRight().setRight(new Node(5));
+
+        node.getRight().getLeft().setRight(new Node(6));
+
+        node.getRight().getLeft().getRight().setLeft(new Node(7));
+
+        node.getRight().getRight().setRight(new Node(8));
+        node.getRight().getRight().getRight().setLeft(new Node(9));
+        return node;
+    }
 }
