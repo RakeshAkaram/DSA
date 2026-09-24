@@ -16,6 +16,10 @@ public class LL026_ReverseKSizeGroup {
         Node curr=head;
         Boolean firstPrevFlag = true;
         Node firstPrev = null;
+        //Repeat until the current becomes null
+        //For each K group apply ReverseLL code
+        //Store the new head obtained in first reverse that would be last node of first reverse
+        //Assign the prevHead->next to the kth node from current node or the last node if the number of nodes are less than k.
         while(curr!=null){
             Node prev=null;
             int count=0;
@@ -40,7 +44,6 @@ public class LL026_ReverseKSizeGroup {
                 count++;
             }
             currHead.next=ptrav;
-
         }
         return firstPrev;
     }
