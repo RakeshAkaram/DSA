@@ -1,9 +1,13 @@
 package dynamicProgramming;
 
 public class DP36_BuynSellStock2 {
+    static int profit=0;
     public static void main(String[] args) {
         int prices[]={7,1,5,4,2,6,8,3};
         int profit = buyNSellStock2(prices);
+        System.out.println("Profit "+profit);
+        profit =0;
+        profit = backtracking2(prices,0,true);
         System.out.println("Profit "+profit);
     }
 
@@ -23,6 +27,16 @@ public class DP36_BuynSellStock2 {
         }
         if(hold)
             profit+=prices[prices.length-1]-buy;
+        return profit;
+    }
+
+    private static  int backtracking2(int arr[],int index,boolean buy){
+        if(index>=arr.length) return 0;
+        if(buy){
+            profit = Math.max(-arr[index]+backtracking2(arr,index+1,false), backtracking2(arr, index+1, true));
+        }else{
+            profit = Math.max(arr[index]+backtracking2(arr,index+1,true), backtracking2(arr,index+1,false));
+        }
         return profit;
     }
 }
